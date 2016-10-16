@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/res/merged/debug/layout/nodes.xml",
+        "source": "/Users/simkoviktor/StudioProjects/NorbironTable/app/src/main/res/layout/nodes.xml"
+    },
+    {
+        "merged": "/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/res/merged/debug/layout/splash.xml",
+        "source": "/Users/simkoviktor/StudioProjects/NorbironTable/app/src/main/res/layout/splash.xml"
+    },
+    {
+        "merged": "/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/res/merged/debug/layout/main.xml",
+        "source": "/Users/simkoviktor/StudioProjects/NorbironTable/app/src/main/res/layout/main.xml"
+    }
+]

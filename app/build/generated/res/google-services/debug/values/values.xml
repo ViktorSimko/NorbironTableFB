@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">798887492391-9gig4n7lsf3r7bd3uegdi8ubgpkmkhq7.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://norbirontablefb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">798887492391</string>
+    <string name="google_api_key" translatable="false">AIzaSyDYCFYR-QMVJxOLcItD4sQbM68Q0g5STBA</string>
+    <string name="google_app_id" translatable="false">1:798887492391:android:c88b42483f61c2db</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDYCFYR-QMVJxOLcItD4sQbM68Q0g5STBA</string>
+    <string name="google_storage_bucket" translatable="false">norbirontablefb.appspot.com</string>
+</resources>

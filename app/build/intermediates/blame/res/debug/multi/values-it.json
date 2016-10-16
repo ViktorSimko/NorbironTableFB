@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 105,
+                    "endColumn": 260,
+                    "endOffset": 361
+                },
+                "from": {
+                    "file": "/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/res/values-it/values.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 343,
+                        "endColumn": 260,
+                        "endOffset": 599
+                    }
+                }
+            }
+        ]
+    }
+]
