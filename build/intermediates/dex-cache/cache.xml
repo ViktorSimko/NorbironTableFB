@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1ef72e72bc0d05602c366582afa9439f58bb31d6">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-common-9.6.1_ccb7e99ccfb9350dfa2bfefe44140532b85ac5e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.0.0_64c7782d8d729d5d2486d1a869d41f3912dd5bb6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0efd1b44f47c134fb245914a1d54a55adbfc2f8d">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-impl-9.6.1_f50261650f6f32de4fce4ef709caad5359884a27.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4a36600281a648769411ef642c331851732bf29e">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-tasks-9.6.1_d44b05f9f2e1b4df168c59e8ed3b3d50574a0e91.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="a1c351dc10b92d638da57f3a6513f87cfbdc9f83">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-analytics-9.6.1_53598e3238f3f99934a2c8af8dc159e371196ea7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/support-annotations-24.0.0_b48cbaaf8e46c29d36f04aeb66d36b1f4463c6ae.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/internal_impl-24.0.0_2fc9372b89e940115646575d84b07f21f2187da0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="eccaaa9ffa6bb4bfbd2e870f01aaf69655d353be">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-9.6.1_3b7401897a0250acb09586ad0c3d30d962db2fda.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ac8365c87591065db07f7bac8551504504832cd4">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-connection-9.6.1_ccc35dedc3d333744681dfc3c1e8b1e8269078b3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1e14ebe1cda8491f152083e752ca5bf73cd37bff">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-iid-9.6.1_12b0741f15e94c466d44b049511bc587586970ec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/9.6.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b75ecdd04a37d31b4a0da2729fc5c558962a529b">
+        <dex dex="/Users/simkoviktor/StudioProjects/NorbironTable/app/build/intermediates/pre-dexed/debug/com.google.firebase-firebase-database-9.6.1_7aee5f25f36e06f790cd2ec4410f5e5f7f0c0c44.jar" />
+    </item>
+
+</items>
