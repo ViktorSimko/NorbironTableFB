@@ -17,7 +17,7 @@
         android:ems="10"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:id="@+id/editText3"
+        android:id="@+id/emailText"
         android:hint="E-mail" />
 
     <EditText
@@ -25,10 +25,10 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:layout_below="@+id/editText3"
-        android:layout_alignEnd="@+id/editText3"
+        android:layout_below="@+id/emailText"
+        android:layout_alignEnd="@+id/emailText"
         android:layout_marginTop="17dp"
-        android:id="@+id/editText4"
+        android:id="@+id/passwordText"
         android:hint="Password" />
 
     <Button
@@ -36,8 +36,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="19dp"
-        android:id="@+id/button2"
-        android:layout_below="@+id/editText4"
+        android:id="@+id/loginButton"
+        android:layout_below="@+id/passwordText"
         android:layout_alignParentStart="true"
         android:visibility="visible" />
 
@@ -45,9 +45,9 @@
         android:text="REGISTER"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/loginButton"
         android:layout_alignParentStart="true"
         android:layout_marginTop="18dp"
-        android:id="@+id/button3"
+        android:id="@+id/registerButton"
         android:visibility="visible" />
 </RelativeLayout>
