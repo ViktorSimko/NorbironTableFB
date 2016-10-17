@@ -1,4 +1,9 @@
 apply plugin: 'com.android.application'
+//apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'norbironTable'
+version = '0.1-SNAPSHOT'
 
 android {
     compileSdkVersion 23
@@ -19,6 +24,7 @@ android {
 }
 
 dependencies {
+    compile 'commons-lang:commons-lang:2.3'
     compile 'com.google.firebase:firebase-database:9.6.1'
     compile 'com.google.firebase:firebase-auth:9.6.1'
     compile 'com.android.support:appcompat-v7:23.4.0'
@@ -26,3 +32,17 @@ dependencies {
 }
 
 apply plugin: 'com.google.gms.google-services'
+task writeNewPom << {
+    pom {
+        project {
+            inceptionYear '2014'
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }.writeTo("pom.xml")
+}

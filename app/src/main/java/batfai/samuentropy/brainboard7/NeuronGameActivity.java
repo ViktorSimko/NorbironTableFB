@@ -43,9 +43,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 /**
  *
  * @author nbatfai
+ * @author simkoviktor
  */
 public class NeuronGameActivity extends android.app.Activity {
     private static final String TAG = NeuronGameActivity.class.toString();
@@ -69,4 +72,9 @@ public class NeuronGameActivity extends android.app.Activity {
         return i;
     }
 
+    @Override
+    public void onBackPressed() {
+        FirebaseAuth.getInstance().signOut();
+        super.onBackPressed();
+    }
 }

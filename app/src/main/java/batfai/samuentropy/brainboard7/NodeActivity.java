@@ -108,6 +108,7 @@ class NodeAdapter extends android.widget.BaseAdapter {
 /**
  *
  * @author nbatfai
+ * @author simkoviktor
  */
 public class NodeActivity extends android.app.Activity {
     private static final String EXTRA_UID = "batfai.samuentropy.brainboard7.uid";

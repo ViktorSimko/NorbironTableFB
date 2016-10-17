@@ -131,11 +131,11 @@ public class LoginActivity extends Activity {
                         //checking if success
                         if(task.isSuccessful()){
                             //display some message here
-                            Toast.makeText(LoginActivity.this,"Successfully registered",Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this,"Signed in",Toast.LENGTH_LONG).show();
                         }else{
                             //display some message here
                             //Log.d(TAG, task.getResult().toString());
-                            Toast.makeText(LoginActivity.this,"Registration Error",Toast.LENGTH_LONG).show();
+                            Toast.makeText(LoginActivity.this,"Error signing in",Toast.LENGTH_LONG).show();
                         }
                     }
                 });
