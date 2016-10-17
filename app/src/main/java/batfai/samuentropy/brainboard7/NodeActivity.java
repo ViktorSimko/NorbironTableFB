@@ -39,6 +39,9 @@
  */
 package batfai.samuentropy.brainboard7;
 
+import android.content.Context;
+import android.content.Intent;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -107,6 +110,9 @@ class NodeAdapter extends android.widget.BaseAdapter {
  * @author nbatfai
  */
 public class NodeActivity extends android.app.Activity {
+    private static final String EXTRA_UID = "batfai.samuentropy.brainboard7.uid";
+    private static final String TAG = NodeActivity.class.toString();
+    private String uid;
 
     @Override
     public void onCreate(android.os.Bundle savedInstanceState) {
@@ -116,23 +122,22 @@ public class NodeActivity extends android.app.Activity {
         android.widget.GridView gridView = (android.widget.GridView) findViewById(R.id.nodelist);
         gridView.setAdapter(new NodeAdapter(this));
 
+        uid = getIntent().getStringExtra(EXTRA_UID);
+
         gridView.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
             public void onItemClick(android.widget.AdapterView<?> parent,
                     android.view.View view,
                     int position, long id) {
                 final FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference ref = database.getReference("nodes");
+                DatabaseReference ref = database.getReference(uid + "nodes");
                 NodeProxy proxy = new NodeProxy();
                 proxy.setType(position);
 
                 ref.push().setValue(proxy);
 
 
-                android.content.Intent intent = new android.content.Intent();
-
-                intent.setClass(NodeActivity.this, NeuronGameActivity.class);
+                android.content.Intent intent = NeuronGameActivity.newIntent(NodeActivity.this, uid);
                 intent.setFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
                 startActivity(intent);
 
                 NodeActivity.this.finish();
@@ -140,5 +145,11 @@ public class NodeActivity extends android.app.Activity {
             }
         });
 
+    }
+
+    public static Intent newIntent(Context context, String uid) {
+        Intent i = new Intent(context, NodeActivity.class);
+        i.putExtra(EXTRA_UID, uid);
+        return i;
     }
 }

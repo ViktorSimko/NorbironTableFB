@@ -50,6 +50,7 @@ public class NeuronBox implements Cloneable {
 
     private Sprite[] neurons;
     public String key;
+    public String uid;
 
     private android.graphics.Bitmap tiles;
     private android.graphics.Bitmap cover;
@@ -157,8 +158,8 @@ public class NeuronBox implements Cloneable {
         this.x = (int) x;
         this.y = (int) y;
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        database.getReference("nodes/" + key + "/posX").setValue(x);
-        database.getReference("nodes/" + key + "/posY").setValue(y);
+        database.getReference(uid + "nodes/" + key + "/posX").setValue(x);
+        database.getReference(uid + "nodes/" + key + "/posY").setValue(y);
     }
 
     public void draw(float shiftx, float shifty, android.graphics.Canvas canvas) {

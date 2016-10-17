@@ -39,6 +39,10 @@
  */
 package batfai.samuentropy.brainboard7;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.Intent;
 import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
@@ -151,6 +155,7 @@ class Nodes {
  */
 public class NorbironSurfaceView extends android.view.SurfaceView implements Runnable {
     private static final String TAG = NorbironSurfaceView.class.toString();
+    public String uid;
     private float startsx = 0;
     private float startsy = 0;
     private float width = 2048;
@@ -221,14 +226,28 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
         sheight = height / 2 - nodes.getBoardPic().getHeight() / 2;
 
     }
+    private Activity getActivity() {
+        Context context = getContext();
+        while (context instanceof ContextWrapper) {
+            if (context instanceof Activity) {
+                return (Activity)context;
+            }
+            context = ((ContextWrapper)context).getBaseContext();
+        }
+        return null;
+    }
 
     private void cinit(android.content.Context context) {
 
         this.context = context;
         nodes = new Nodes(this);
 
+        NeuronGameActivity host = (NeuronGameActivity) getActivity();
+        uid = host.uid;
+        Log.d(TAG, uid);
+
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref = database.getReference("nodes");
+        DatabaseReference ref = database.getReference(uid + "nodes");
         ref.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -236,6 +255,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 for (DataSnapshot child: dataSnapshot.getChildren()) {
                     NodeProxy node = child.getValue(NodeProxy.class);
                     NeuronBox nb = (NeuronBox) nodes.get(node.getType()).clone();
+                    nb.uid = uid;
                     nb.key = child.getKey();
                     nb.setXY(node.getPosX(), node.getPosY());
                     nodeBoxes.add(nb);
@@ -323,7 +343,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
 
     public void newNode() {
 
-        android.content.Intent i = new android.content.Intent(context, NodeActivity.class);
+        Intent i = NodeActivity.newIntent(getActivity(), uid);
         context.startActivity(i);
 
     }

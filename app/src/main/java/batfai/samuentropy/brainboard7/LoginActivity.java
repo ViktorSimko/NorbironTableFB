@@ -1,6 +1,7 @@
 package batfai.samuentropy.brainboard7;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
@@ -37,6 +38,9 @@ public class LoginActivity extends Activity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
+                    Intent i = NeuronGameActivity.newIntent(LoginActivity.this, user.getUid());
+                    startActivity(i);
+
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {

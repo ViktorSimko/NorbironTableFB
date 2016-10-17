@@ -39,16 +39,34 @@
  */
 package batfai.samuentropy.brainboard7;
 
+import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
+
 /**
  *
  * @author nbatfai
  */
 public class NeuronGameActivity extends android.app.Activity {
+    private static final String TAG = NeuronGameActivity.class.toString();
+    private static final String EXTRA_UID = "batfai.samuentropy.brainboard7.uid";
+    public String uid;
+    private NorbironSurfaceView surfaceView;
 
     @Override
     public void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        uid = getIntent().getStringExtra(EXTRA_UID);
         setContentView(R.layout.main);
-                
+
+
+        surfaceView = (NorbironSurfaceView) findViewById(R.id.norbiron_surface_view);
     }
+    
+    public static Intent newIntent(Context context, String uid) {
+        Intent i = new Intent(context, NeuronGameActivity.class);
+        i.putExtra(EXTRA_UID, uid);
+        return i;
+    }
+
 }
