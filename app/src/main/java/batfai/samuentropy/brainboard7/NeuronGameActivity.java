@@ -43,6 +43,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 
 /**
@@ -75,6 +76,7 @@ public class NeuronGameActivity extends android.app.Activity {
     @Override
     public void onBackPressed() {
         FirebaseAuth.getInstance().signOut();
+        LoginManager.getInstance().logOut();
         super.onBackPressed();
     }
 }
