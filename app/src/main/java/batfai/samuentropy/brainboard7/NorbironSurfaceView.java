@@ -129,7 +129,7 @@ class Nodes {
         nandIronProcCover = android.graphics.BitmapFactory.decodeResource(surfaceView.getResources(), resId);
         nandIronProcCover = android.graphics.Bitmap.createScaledBitmap(nandIronProcCover, 168, 197, false);
 
-        neuronBox[6] = new NeuronBox(neuronSprite, 2 * 14, 64, 62, 15, nandIronProcCover, 600, 600);
+        neuronBox[6] = new NeuronBox(neuronSprite, 2 * 14, 64, 62, 15, nandIronProcCover, 18, 1550);
         neuronBox[6].setType(0);
     }
 
@@ -173,6 +173,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
 
     private Nodes nodes;
     private static java.util.List<NeuronBox> nodeBoxes = new java.util.ArrayList<NeuronBox>();
+    private NeuronBox buildNode;
 
     protected NeuronBox selNb = null;
 
@@ -261,7 +262,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                     nb.setXY(node.getPosX(), node.getPosY());
                     nodeBoxes.add(nb);
                 }
-                nodeBoxes.add((NeuronBox) nodes.get(6).clone());
+                //nodeBoxes.add((NeuronBox) nodes.get(6).clone());
             }
 
             @Override
@@ -269,6 +270,8 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
 
             }
         });
+
+        buildNode = (NeuronBox) nodes.get(6).clone();
 
 
         Log.d(TAG, "init");
@@ -298,6 +301,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
 
             for (NeuronBox nb : nodeBoxes) {
                 nb.draw(-startsx, -startsy, canvas);
+                buildNode.draw(0, 0, canvas);
             }
 
             canvas.restore();
@@ -339,6 +343,10 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 r = nb;
             }
         }
+        if ((m = d(buildNode.getX() + buildNode.getWidth() / 2, buildNode.getY() + buildNode.getHeight() / 2, x - startsx, y - startsy)) < max) {
+            max = m;
+            r = buildNode;
+        }
         return r;
     }
 
@@ -363,17 +371,16 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
             fromsy = y;
 
             NeuronBox nb = nearestNeuronBox(x + startsx, y + startsy);
+
             if (nb != null) {
 
                 if (nb.getType() == 0) {
-                    if (nb.getSelected()) {
-                        newNode();
-                    }
+                    newNode();
+                } else {
+                    nb.setCover(!nb.getCover());
+                    nb.setSelected(!nb.getSelected());
+                    selNb = nb;
                 }
-
-                nb.setCover(!nb.getCover());
-                nb.setSelected(!nb.getSelected());
-                selNb = nb;
 
             } else {
                 selNb = null;
@@ -428,6 +435,7 @@ public class NorbironSurfaceView extends android.view.SurfaceView implements Run
                 for (NeuronBox nb : nodeBoxes) {
                     nb.step();
                 }
+                buildNode.step();
 
                 repaint();
 
